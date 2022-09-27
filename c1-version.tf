@@ -5,24 +5,19 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "=3.0.0"
     }
+    random = {
+        source = "hashicorp/random"
+    }
   }
 }
 
 provider "azurerm" {
     features {}
 }
-
-provider "azurerm" {
-    features {
-      virtual_machine {
-        delete_os_disk_on_deletion=false #this will ensure that when you delete your vm storage will not be deleted
-      }
-    }
-         alias="provider2-westus"
-      #client_id="XXXX"
-      #client_secret="xxxxx"
-      #environment = "german"
-      #subscription_id="123"
- 
+#random string resource
+resource "random_string" "myrandom" {
+  length = 6
+  upper = false
+  special = false
+  number = false
 }
-####create a resource group
