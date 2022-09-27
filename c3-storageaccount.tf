@@ -1,4 +1,4 @@
-resource "azurerm_storage_account" "appsstore" {
+/*resource "azurerm_storage_account" "appsstore" {
   name                     = "appstore12345"
   resource_group_name      = azurerm_resource_group.ag_rg.name
   location                 = azurerm_resource_group.ag_rg.location
@@ -9,4 +9,4 @@ resource "azurerm_storage_account" "appsstore" {
     environment = "staging"
   }
 
-} 
+} */
